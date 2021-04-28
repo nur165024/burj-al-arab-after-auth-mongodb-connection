@@ -22,7 +22,7 @@ const Booking = () => {
             <ul>
                 {
                     book.map(bk =>
-                        <li><b>Name :</b> {bk.name}, <b>E-mail :</b> {bk.email}, <b>InDate :</b> {(new Date(bk.InDate).toDateString('dd/MM/yyyy'))}, <b>EndDate :</b> {(new Date(bk.OutDate).toDateString('dd/MM/yyyy'))}</li>
+                        <li key={bk._id}><b>Name :</b> {bk.name}, <b>E-mail :</b> {bk.email}, <b>InDate :</b> {(new Date(bk.InDate).toDateString('dd/MM/yyyy'))}, <b>EndDate :</b> {(new Date(bk.OutDate).toDateString('dd/MM/yyyy'))}</li>
                     )
                 }
             </ul>
